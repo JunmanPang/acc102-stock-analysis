@@ -1,35 +1,35 @@
-# AAPL vs TSLA 月度收益率对比分析 (2020-2022)
+# AAPL vs TSLA Monthly Return Comparison (2020-2022)
 
-## 1. 问题与用户
-帮助投资者比较苹果（AAPL）和特斯拉（TSLA）在 2020–2022 年间的月度收益率波动，了解哪只股票风险更高、收益更极端。
+## 1. Problem & User
+Help investors compare the monthly return volatility of Apple (AAPL) and Tesla (TSLA) between 2020 and 2022, to understand which stock is riskier and which has more extreme returns.
 
-## 2. 数据来源
-- **来源**：WRDS CRSP 月度数据库（`crsp.msf` + `crsp.msfhdr`）
-- **访问日期**：2026年4月14日
-- **关键字段**：`date`（日期）、`ret`（月度收益率）、`htsymbol`（股票代码）
+## 2. Data Source
+- **Source**: WRDS CRSP Monthly Database (`crsp.msf` + `crsp.msfhdr`)
+- **Access Date**: April 14, 2026
+- **Key Fields**: `date` (date), `ret` (monthly return), `htsymbol` (ticker symbol)
 
-## 3. 方法
-- 使用 `wrds` 库连接数据库，通过参数化 SQL 查询数据
-- 数据清洗：过滤缺失值，按日期排序
-- 分析：描述性统计（均值、标准差）、极值查找
-- 可视化：Matplotlib 折线图展示收益率趋势
+## 3. Methods
+- Connect to WRDS using the `wrds` library and query data with parameterized SQL
+- Data cleaning: filter missing returns, sort by date
+- Analysis: descriptive statistics (mean, standard deviation), extreme return identification
+- Visualization: Matplotlib line chart to show return trends
 
-## 4. 主要发现
-- TSLA 的月度收益率波动（标准差约 18%）远高于 AAPL（约 8%）
-- 2020 年 3 月（新冠疫情冲击）两者均大幅下跌，TSLA 下跌更剧烈（-21% vs -12%）
-- 2021 年 1 月 TSLA 出现极端正收益（+45%），显示高弹性
+## 4. Key Findings
+- TSLA's monthly return volatility (std ≈ 18%) is much higher than AAPL's (≈ 8%)
+- Both stocks dropped sharply in March 2020 (COVID-19 shock), with TSLA falling more (-21% vs -12%)
+- TSLA had an extreme positive return (+45%) in January 2021, showing high elasticity
 
-## 5. 如何运行
-1. 克隆本仓库
-2. 安装依赖：`pip install -r requirements.txt`
-3. 打开 `assignment.ipynb`，在连接部分填写你的 WRDS 用户名和密码
-4. 按顺序运行所有单元格（或直接查看已保存的输出）
+## 5. How to Run
+1. Clone this repository
+2. Install dependencies: `pip install -r requirements.txt`
+3. Open `assignment.ipynb`, fill in your WRDS username and password in the connection cell
+4. Run all cells sequentially (or simply view the pre-saved outputs)
 
-## 6. 产品链接 / Demo
-- GitHub 仓库：https://github.com/JunnanPang/acc102-stock-analysis
-- 演示视频：[待添加]
+## 6. Product Link / Demo
+- GitHub Repository: https://github.com/JunnanPang/acc102-stock-analysis
+- Demo Video: [Link to your YouTube video]
 
-## 7. 局限与下一步
-- 仅两只股票、三年数据，不具普适性
-- 未考虑市场整体影响（如 S&P 500 基准）
-- 下一步可扩展至更多股票、加入行业对比或构建交互式工具（Streamlit）
+## 7. Limitations & Next Steps
+- Only two stocks and three years of data, not generalizable
+- Did not control for overall market effects (e.g., S&P 500 benchmark)
+- Next steps: expand to more stocks, add industry comparisons, or build an interactive tool (Streamlit)
